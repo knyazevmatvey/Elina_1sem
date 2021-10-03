@@ -16,10 +16,10 @@ def tree(x, y, a, b):
 
 def horse(x,y, a, b):
     ellipse(screen, (255, 255, 255), (x, y, a, b))
-    rect(screen, (255, 255, 255), (x + a / 9, y + b / 2, a / 9, 3 * b / 2))
-    rect(screen, (255, 255, 255), (x + 3 * a / 9, y + b / 4, a / 9, 3 * b / 2))
-    rect(screen, (255, 255, 255), (x + 5 * a / 9, y + b / 2, a / 9, 3 * b / 2))
-    rect(screen, (255, 255, 255), (x + 7 * a / 9, y + b / 4, a / 9, 3 * b / 2))
+    rect(screen, (255, 255, 255), (x + a / 9, y + b / 2, abs(a) / 9, 3 * b / 2))
+    rect(screen, (255, 255, 255), (x + 3 * a / 9, y + b / 4, abs(a) / 9, 3 * b / 2))
+    rect(screen, (255, 255, 255), (x + 5 * a / 9, y + b / 2, abs(a) / 9, 3 * b / 2))
+    rect(screen, (255, 255, 255), (x + 7 * a / 9, y + b / 4, abs(a) / 9, 3 * b / 2))
     ellipse(screen, (255, 255, 255), (x + 7 * a / 9, y - b, 2 * a / 9, 3 * b / 2))
     ellipse(screen, (255, 255, 255), (x + 7 * a / 9, y - 5 * b / 6, 4 * a / 9, b / 3))
     circle(screen, (255, 255, 255), (x + 8 * a / 9, y - 5 * b / 6), 2 * a / 9)
@@ -48,7 +48,9 @@ tree(0, 150, 60, 75)
 tree(70, 160, 50, 100)
 tree(30, 350, 70, 90)
 
-horse(200, 300, 100, 70)
+horse(230, 300, 100, 70)
+horse(300, 500, 70, 50)
+horse(200, 450, -70, 60)
 
 pygame.display.update()
 clock = pygame.time.Clock()
